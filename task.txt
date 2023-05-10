@@ -1,0 +1,35 @@
+valor hora (USD)
+
+horas trabajadas
+-------------------------------------------------------
+
+- convertir a pesos ( usd, precioUsd)
+
+- ingresos brutos 5% o 7% dependiendo esta actual afip*  ( recibe Precio en pesos ) 
+
+- Retencion gobierno K 3.5% ( recibe Precio en pesos )
+
+
+
+*al estado actual de afip generar una function random que devuelva 1 o 0 dependiendo de eso sera el 5% o 7%
+
+
+
+usdtotal(hora, cantidadHoras) => usdTotal
+APesos(100, 468) => $468
+IngresosBruto() => 5% o 7%
+RetencionK()  => 3.5%
+
+
+
+Dato de Prueba
+
+Valor hora: 8
+Horas trabajadas: 40
+usdPRecio: 468
+
+
+usdtotal(hora, cantidadHoras) => 320
+APesos(320, 468) => $149,760
+IngresosBruto() => 7,488   (5%)
+RetencionK => 5,241.6
