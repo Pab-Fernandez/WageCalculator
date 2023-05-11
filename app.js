@@ -4,7 +4,7 @@ const hoursWorked = () => 40;
 const dolarfurro = () => 468;
 
 const billedTime = () => {
-  return hourlyWage * hoursWorked;
+  return hourlyWage() * hoursWorked();
 };
 console.log(billedTime());
 
@@ -19,17 +19,17 @@ const randomZeroOrOne = () => {
   return Math.round(Math.random());
 };
 
-const sliceAfip = () => {
-  if (randomZeroOrOne() === 0) {
-    sliceAfip = 5;
-  } else {
-    sliceAfip = 7;
-  }
-};
-console.log(sliceAfip());
+let sliceAfip;
+if (randomZeroOrOne () === 0) {
+  sliceAfip = 5;
+} else {
+  sliceAfip = 7;
+}
+
+console.log(sliceAfip);
 // afip life
 
-const tax = () => sliceAfip() * 0.01;
+const tax = () => sliceAfip * 0.01;
 const pesosLessAfip = () => {
   return makeThePesosHitTheFloor() - makeThePesosHitTheFloor() * tax();
 };
