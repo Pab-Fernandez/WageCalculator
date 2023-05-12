@@ -1,43 +1,46 @@
 //function horas trabajadas.
-const hourlyWage = () => 10;
-const hoursWorked = () => 40;
-const dolarfurro = () => 468;
+//const hourlyWage = 10;
+//const hoursWorked = 40;
+//const dolarfurro = 500;
 
-const billedTime = () => {
-  return hourlyWage() * hoursWorked();
+// wage function
+
+const billedTime = (wage, worked) => {
+  return wage * worked;
 };
-console.log(billedTime());
-
+console.log("Wage", billedTime(60, 10));
 //a pesitos
-const makeThePesosHitTheFloor = () => {
-  return billedTime() * dolarfurro();
+const pesosWage = (wage, worked, dolar) => {
+  return billedTime(wage, worked) * dolar;
 };
-console.log(makeThePesosHitTheFloor());
+console.log("Wage in pesos:", pesosWage(60, 10, 368));
 
 //random AFIP
 const randomZeroOrOne = () => {
   return Math.round(Math.random());
 };
+//let sliceAfip;
+//if (randomZeroOrOne () === 0) {
+//  sliceAfip = 5;
+//} else {
+//  sliceAfip = 7;
+//}
 
-let sliceAfip;
-if (randomZeroOrOne () === 0) {
-  sliceAfip = 5;
-} else {
-  sliceAfip = 7;
-}
-
-console.log(sliceAfip);
+const getRandomTax = () => {
+  return randomZeroOrOne() == 0 ? 0.05 : 0.07;
+};
+console.log (getRandomTax())
 // afip life
 
-const tax = () => sliceAfip * 0.01;
-const pesosLessAfip = () => {
-  return makeThePesosHitTheFloor() - makeThePesosHitTheFloor() * tax();
+const taxAfip = () => {
+  return pesosWage(60,10,368) * getRandomTax();
 };
 
-console.log(pesosLessAfip());
-//the  taxing k
-const toxicTax = () => 0.035;
-const pesosWithtax = () => {
-  return makeThePesosHitTheFloor() -(makeThePesosHitTheFloor() * toxicTax());
+console.log(taxAfip());
+//the taxing k
+
+const taxedWageAgain = (wage, worked, dolar, tax) => {
+  return pesosWage(60,10,368) * tax;
 };
-console.log(pesosWithtax());
+
+console.log("otro impuesto", taxedWageAgain(60, 10, 368, 0.035));

@@ -33,3 +33,10 @@ usdtotal(hora, cantidadHoras) => 320
 APesos(320, 468) => $149,760
 IngresosBruto() => 7,488   (5%)
 RetencionK => 5,241.6
+
+//const _pesosWage = (billed,dolar) => {
+//  return billed * dolar ;
+//};
+//
+//console.log(_pesosWage(billedTime(60,10),468));
+Asi es invocando una funcion
